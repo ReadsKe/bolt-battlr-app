@@ -11,7 +11,7 @@ const BotCollection = () => {
     fetch('http://localhost:3000/bots')
       .then((response) => response.json())
       .then((data) => setBots(data))
-  }, []);
+  }, [enlistedBots]);
 
   const addToYourBotArmy = (bot) => {
     // Check if the bot is already enlisted
