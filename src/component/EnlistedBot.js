@@ -2,7 +2,7 @@ import React from 'react';
 
 const EnlistedBot = ({ bot, addToYourBotArmy, releaseFromYourBotArmy, dischargeBot }) => {
   return (
-    <div className="enlisted-bot">
+    <div className="enlisted-bot" >
 
         <img src={bot.avatar_url} alt={bot.name} />
         <h3>{bot.name}</h3>
