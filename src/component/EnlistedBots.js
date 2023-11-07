@@ -44,9 +44,11 @@ const EnlistedBots = () => {
   return (
     <div className="enlisted-bots">
       <div id='botarmylist'>
+        <h3>My Galactic Bot Army</h3>
       <YourBotArmy army={botArmy} removeFromBotArmy={removeFromBotArmy} dischargeBot={dischargeBot} />
       </div>
       <div>
+        <h3>Bot BotCollection</h3>
       <BotCollection bots={bots} addToBotArmy={addToBotArmy} />
       </div>
     </div>
