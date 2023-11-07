@@ -1,29 +1,3 @@
-// import React from 'react';
-
-// const EnlistedBots = ({ enlistedBots, releaseBot }) => {
-//   return (
-//     <div className="enlisted-bots">
-//       <div>
-//       {enlistedBots.map((bot) => (
-//         <div key={bot.id} onClick={() => releaseBot(bot)}>
-//           <img src={bot.avatar_url} alt={bot.name} />
-//           <p>{bot.name}</p>
-//           <p>Code: {bot.catchphrase}</p>  
-//           <p>Class: {bot.bot_class}</p>
-//           <p>Armor: {bot.armor}</p>  
-//           <p>Health: {bot.health}</p>
-//           <p>Damage: {bot.damage}</p>
-//           <p>created: {bot.created_at}</p>  
-//           <p>last updated: {bot.updated_at}</p>
-//         </div>
-//       ))}
-//       </div>
-
-//     </div>
-//   );
-// };
-
-// export default EnlistedBots;
 import React, { useState, useEffect } from 'react';
 import BotCollection from './BotCollection';
 import YourBotArmy from './YourBotArmy';
