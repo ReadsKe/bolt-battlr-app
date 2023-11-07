@@ -1,17 +1,13 @@
-import './App.css';
-import BotCollection from './component/BotCollection';
-import YourBotArmy from './component/YourBotArmy';
-
+import React from 'react';
+import EnlistedBots from './component/EnlistedBots';
 function App() {
   return (
     <div className="App">
-    <h1>Your Bot Army</h1>
-    <div className="container">
-      <BotCollection />
-      <YourBotArmy />
+      <h1>Bot Army App</h1>
+       <EnlistedBots />
     </div>
-  </div>
   );
 }
 
 export default App;
+

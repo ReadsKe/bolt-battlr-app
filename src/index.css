@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#botarmylist{
+  min-height: 60vh;
+  background-color: rgb(0, 255, 17);
+}
