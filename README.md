@@ -11,7 +11,7 @@ This is a React application that allows users to enlist bots in their army and d
 - Clone the repository to your local machine.
 - Install the required dependencies by running npm install in the root directory.
 - Run your json server through `json-server --watch db.json`
-- Start the development server by running `npm start`.\
+- Start the development server by running `npm start`.
 
 
 

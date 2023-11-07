@@ -5,15 +5,16 @@ import YourBotArmy from './YourBotArmy';
 const EnlistedBots = () => {
   const [botArmy, setBotArmy] = useState([]);
   const [bots, setBots] = useState([]); 
+  // CRUD-FETCH
   useEffect(()=>{
-            fetch("http://localhost:3000/bots")
-            .then((res)=>res.json())
-            .then((res) =>{
-              setBots(res)
-            })
+    fetch("http://localhost:3000/bots")
+    .then((res)=>res.json())
+    .then((res) =>{
+     setBots(res)
+    })
             
-        }, []);
-        console.log(bots)
+    }, []);
+    console.log(bots)
 
 
   const addToBotArmy = (bot) => {
@@ -27,29 +28,27 @@ const EnlistedBots = () => {
     setBotArmy(updatedArmy);
   };
 
-    const dischargeBot = (bot) => {
-    // CRUD-DELETE 
-    fetch(`http://localhost:3000/bots${bot.id}`, {
+  const dischargeBot = (bot) => {
+    fetch(`http://localhost:3000/bots/${bot.id}`, {
       method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-      },
     })
-    .then(() => {
-      removeFromBotArmy(bot);
-    })
-
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+      });
+      const updatedBots = bots.filter((b) => b.id !== bot.id);
+      setBots(updatedBots);
   };
 
   return (
     <div className="enlisted-bots">
       <div id='botarmylist'>
         <h3>My Galactic Bot Army</h3>
-      <YourBotArmy army={botArmy} removeFromBotArmy={removeFromBotArmy} dischargeBot={dischargeBot} />
+        <YourBotArmy army={botArmy} removeFromBotArmy={removeFromBotArmy} dischargeBot={dischargeBot} />
       </div>
       <div>
         <h3>Bot BotCollection</h3>
-      <BotCollection bots={bots} addToBotArmy={addToBotArmy} />
+      <BotCollection bots={bots} addToBotArmy={addToBotArmy} dischargeBot={dischargeBot}/>
       </div>
     </div>
   );
